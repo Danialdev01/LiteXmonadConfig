@@ -2,7 +2,7 @@
 
 ## Installation :
 - cd .xmonad
-- git clone < github link >
+- git clone [< github link >](https://github.com/Danialdev01/DanialXmonadConfig)
 
 ## Keybindings :
 

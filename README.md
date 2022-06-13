@@ -29,7 +29,7 @@
 - Change Next Workspace = Alt + Tab
 - Change to Left Workspace = Ctrl + Alt + LeftArrow
 - Change to Right Workspace = Ctrl + Alt + RightArrow
-- Change Focus Window = Super + J
+- Change Focus Window = Super + Tab
 - Move Focus Window Down = Super + Shift + J 
 - Shrink Focus Area = Ctrl + Shift + K
 - Expand Focus Area = Ctrl + Shift + L

@@ -39,3 +39,7 @@
 
 ### Arco Tools :
 - Arco Tweaks = Ctrl + Alt + E
+
+### Media Keys :
+- Increase Volume = Ctrl + Shift + UpArrow
+- Decrease Volume = Ctrl + Shift + DownArrow

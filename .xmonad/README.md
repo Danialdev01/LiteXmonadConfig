@@ -4,10 +4,8 @@
 
 ```sh
 rm -rf .xmonad
-mkdir .xmonad
-cd .xmonad
 git clone https://github.com/Danialdev01/DanialXmonadConfig
-
+mv DanialXmonadConfig/.xmonad ./
 ```
 ## Keybindings :
 

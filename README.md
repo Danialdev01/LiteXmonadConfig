@@ -13,7 +13,7 @@
 - Rofi = Super + D
 - Rofi theme selector = Super + F12
 - Alacritty = Super + Enter
-- Spotify = Ctrl + Alt + S
+- Spotify = Super + S
 - Dolphin = Super + Shift + Enter
 - FireFox = Ctrl + Alt + F
 
@@ -43,3 +43,5 @@
 ### Media Keys :
 - Increase Volume = Ctrl + Shift + UpArrow
 - Decrease Volume = Ctrl + Shift + DownArrow
+- Increase Brightness = Super + Shift + UpArrow
+- Decrease Brightness = Super + Shift + DownArrow

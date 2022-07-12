@@ -137,11 +137,13 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
   , ((modMask, xK_q), kill )
   , ((modMask, xK_b), spawn $ "brave" )
   , ((modMask, xK_d), spawn $ "rofi -show drun" )
+  , ((modMask, xK_v), spawn $ "flatpak run org.kde.kdenlive" )
   , ((modMask, xK_y), spawn $ "polybar-msg cmd toggle" )
   , ((modMask, xK_x), spawn $ "archlinux-logout" )
+  , ((modMask, xK_s), spawn $ "spotify" )
+  , ((modMask, xK_m), spawn $ "emacsclient -c -a 'emacs'" )
   , ((modMask, xK_Escape), spawn $ "xkill" )
   , ((modMask, xK_Return), spawn $ "alacritty" )
-  , ((modMask, xK_F10), spawn $ "spotify" )
   , ((modMask, xK_F12), spawn $ "rofi-theme-selector" )
 
   -- SUPER + SHIFT KEYS
@@ -215,14 +217,22 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
 
   -- Increase brightness
   , ((0, xF86XK_MonBrightnessUp),  spawn $ "brightnessctl s 5%+")
+  , ((modMask .|. shiftMask , xK_Down),  spawn $ "brightnessctl s 5%+")
 
   -- Decrease brightness
   , ((0, xF86XK_MonBrightnessDown), spawn $ "brightnessctl s 5%-")
+  , ((modMask .|. shiftMask , xK_Up), spawn $ "brightnessctl s 5%-")
 
 
   -- Lux brightness ctl because real brightness dont work idk
+
+  -- Increase brightness
   , ((0, xF86XK_MonBrightnessUp), spawn "lux -a 10%")
+  , ((modMask .|. shiftMask , xK_Up), spawn "lux -a 10%")
+
+  -- Decress brightness
   , ((0, xF86XK_MonBrightnessDown), spawn "lux -s 10%")
+  , ((modMask .|. shiftMask , xK_Down), spawn "lux -s 10%")
 
 --  , ((0, xF86XK_AudioPlay), spawn $ "mpc toggle")
 --  , ((0, xF86XK_AudioNext), spawn $ "mpc next")

@@ -42,11 +42,12 @@ nitrogen --restore &
 #(conky -c $HOME/.xmonad/scripts/system-overview) &
 
 # system Daemon
-/usr/bin/emacs --daemon &
+run /usr/bin/emacs --daemon &
 
 #starting utility applications at boot time
 #un variety &
 run nm-applet &
+run ticktick &
 run pamac-tray &
 run xfce4-power-manager &
 run volumeicon &
@@ -56,8 +57,8 @@ picom --config $HOME/.xmonad/scripts/picom.conf &
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 /usr/lib/xfce4/notifyd/xfce4-notifyd &
 
-sudo ntfsfix /dev/sda5 &
-sudo mount -a &
+run sudo ntfsfix /dev/sda5 &
+run sudo mount -a &
 
 #Apps run when boot
 # emacsclient -c -a 'emacs'

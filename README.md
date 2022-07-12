@@ -1,9 +1,14 @@
 # Danial config keybindings:
 
 ## Installation :
-- cd .xmonad
-- git clone https://github.com/Danialdev01/DanialXmonadConfig
 
+```sh
+rm -rf .xmonad
+mkdir .xmonad
+cd .xmonad
+git clone https://github.com/Danialdev01/DanialXmonadConfig
+
+```
 ## Keybindings :
 
 ### Apps binding:

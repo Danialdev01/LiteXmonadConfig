@@ -136,12 +136,12 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
   [ ((modMask, xK_e), spawn $ "code" )
   , ((modMask, xK_q), kill )
   , ((modMask, xK_b), spawn $ "brave" )
-  , ((modMask, xK_d), spawn $ "rofi -show drun" )
+  , ((modMask, xK_d), spawn $ "rofi -show drun -display-drun 'Runs:'" )
   , ((modMask, xK_v), spawn $ "flatpak run org.kde.kdenlive" )
   , ((modMask, xK_y), spawn $ "polybar-msg cmd toggle" )
   , ((modMask, xK_x), spawn $ "archlinux-logout" )
   , ((modMask, xK_s), spawn $ "spotify" )
-  , ((modMask, xK_m), spawn $ "emacsclient -c -a 'emacs'" )
+  , ((modMask, xK_m), spawn $ "flatpak run com.github.marktext.marktext" )
   , ((modMask, xK_Escape), spawn $ "xkill" )
   , ((modMask, xK_Return), spawn $ "alacritty" )
   , ((modMask, xK_F12), spawn $ "rofi-theme-selector" )
@@ -149,7 +149,7 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
   -- SUPER + SHIFT KEYS
 
   , ((modMask .|. shiftMask , xK_Return ), spawn $ "dolphin")
-  , ((modMask .|. shiftMask , xK_d ), spawn $ "dmenu_run -i -nb '#191919' -nf '#fea63c' -sb '#fea63c' -sf '#191919' -fn 'NotoMonoRegular:bold:pixelsize=14'")
+  , ((modMask .|. shiftMask , xK_d ), spawn $ "dmenu_run -i -nb '#191919' -nf '#00ffff' -sb '#00ffff' -sf '#191919' -fn 'NotoMonoRegular:bold:pixelsize=14'")
   , ((modMask .|. shiftMask , xK_r ), spawn $ "xmonad --recompile && xmonad --restart")
   , ((modMask .|. shiftMask , xK_q ), kill)
   -- , ((modMask .|. shiftMask , xK_x ), io (exitWith ExitSuccess))

@@ -43,11 +43,12 @@ nitrogen --restore &
 
 # system Daemon
 run /usr/bin/emacs --daemon &
+sudo systemctl start httpd &
 
 #starting utility applications at boot time
-#un variety &
+#run variety &
 run nm-applet &
-run ticktick &
+run notion-snap &
 run pamac-tray &
 run xfce4-power-manager &
 run volumeicon &
@@ -69,7 +70,7 @@ run sudo mount -a &
 #run spotify &
 #run atom &
 #run telegram-desktop &
-#run discord &
+run discord &
 #run dropbox &
 #run insync start &
 #run ckb-next -b &

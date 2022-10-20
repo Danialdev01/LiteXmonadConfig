@@ -102,8 +102,8 @@ myManageHook = composeAll . concat $
     -- my9Shifts = []
     -- my10Shifts = ["discord"]
 
-
-
+-- Toggle fullscreen
+--((modMask .|. mod1Mask , xK_f ), sendMessage $ Toggle FULL)
 
 myLayout = spacingRaw True (Border 0 5 5 5) True (Border 5 5 5 5) True $ avoidStruts $ mkToggle (NBFULL ?? NOBORDERS ?? EOT) $ tiled ||| Mirror tiled ||| spiral (6/7)  ||| ThreeColMid 1 (3/100) (1/2) ||| Full
     where
@@ -112,6 +112,7 @@ myLayout = spacingRaw True (Border 0 5 5 5) True (Border 5 5 5 5) True $ avoidSt
         delta = 3/100
         tiled_ratio = 1/2
 
+--((modMask, xK_b), sendMessage ToggleGaps >> spawn "polybar-msg cmd toggle")
 
 myMouseBindings (XConfig {XMonad.modMask = modMask}) = M.fromList $
 
@@ -135,13 +136,14 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
 
   [ ((modMask, xK_e), spawn $ "code" )
   , ((modMask, xK_q), kill )
-  , ((modMask, xK_b), spawn $ "brave" )
+  , ((modMask, xK_b), spawn $ "firefox" )
+  , ((modMask .|. shiftMask , xK_b), spawn $ "brave" )
   , ((modMask, xK_d), spawn $ "rofi -show drun -display-drun 'Runs:'" )
   , ((modMask, xK_v), spawn $ "flatpak run org.kde.kdenlive" )
   , ((modMask, xK_y), spawn $ "polybar-msg cmd toggle" )
   , ((modMask, xK_x), spawn $ "archlinux-logout" )
   , ((modMask, xK_s), spawn $ "spotify" )
-  , ((modMask, xK_m), spawn $ "flatpak run com.github.marktext.marktext" )
+  , ((modMask, xK_m), spawn $ "emacsclient -c" )
   , ((modMask, xK_Escape), spawn $ "xkill" )
   , ((modMask, xK_Return), spawn $ "alacritty" )
   , ((modMask, xK_F12), spawn $ "rofi-theme-selector" )

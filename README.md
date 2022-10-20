@@ -14,7 +14,8 @@ git clone https://github.com/Danialdev01/DanialXmonadConfig
 ### Apps binding:
 
 - VisualStudioCode = Super + E
-- Brave = Super + B 
+- Firefox = Super + B 
+- Brave = Super + Shift + B 
 - Rofi = Super + D
 - Rofi theme selector = Super + F12
 - Alacritty = Super + Enter

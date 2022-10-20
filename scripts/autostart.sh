@@ -42,13 +42,12 @@ nitrogen --restore &
 #(conky -c $HOME/.xmonad/scripts/system-overview) &
 
 # system Daemon
-run /usr/bin/emacs --daemon &
+emacs --daemon &
 sudo systemctl start httpd &
 
 #starting utility applications at boot time
 #run variety &
 run nm-applet &
-run notion-snap &
 run pamac-tray &
 run xfce4-power-manager &
 run volumeicon &
@@ -62,7 +61,8 @@ run sudo ntfsfix /dev/sda5 &
 run sudo mount -a &
 
 #Apps run when boot
-# emacsclient -c -a 'emacs'
+run notion-snap &
+run emacsclient -c &
 #run caffeine &
 #run vivaldi-stable &
 #run firefox &
@@ -70,7 +70,7 @@ run sudo mount -a &
 #run spotify &
 #run atom &
 #run telegram-desktop &
-run discord &
+#run discord &
 #run dropbox &
 #run insync start &
 #run ckb-next -b &

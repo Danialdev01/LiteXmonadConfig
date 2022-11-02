@@ -57,12 +57,12 @@ picom --config $HOME/.xmonad/scripts/picom.conf &
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 /usr/lib/xfce4/notifyd/xfce4-notifyd &
 
-run sudo ntfsfix /dev/sda5 &
-run sudo mount -a &
+sudo ntfsfix /dev/sda1 &
+sudo mount -a &
 
 #Apps run when boot
-run notion-snap &
-run emacsclient -c &
+#run notion-snap &
+#run emacsclient -c &
 #run caffeine &
 #run vivaldi-stable &
 #run firefox &

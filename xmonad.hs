@@ -102,9 +102,6 @@ myManageHook = composeAll . concat $
     -- my9Shifts = []
     -- my10Shifts = ["discord"]
 
--- Toggle fullscreen
---((modMask .|. mod1Mask , xK_f ), sendMessage $ Toggle FULL)
-
 myLayout = spacingRaw True (Border 0 5 5 5) True (Border 5 5 5 5) True $ avoidStruts $ mkToggle (NBFULL ?? NOBORDERS ?? EOT) $ tiled ||| Mirror tiled ||| spiral (6/7)  ||| ThreeColMid 1 (3/100) (1/2) ||| Full
     where
         tiled = Tall nmaster delta tiled_ratio
@@ -138,7 +135,8 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
   , ((modMask, xK_q), kill )
   , ((modMask, xK_b), spawn $ "firefox" )
   , ((modMask .|. shiftMask , xK_b), spawn $ "brave" )
-  , ((modMask, xK_d), spawn $ "rofi -show drun -display-drun 'Runs:'" )
+  , ((modMask, xK_d), spawn $ "danial-menu-manager" ) 
+  , ((modMask, xK_p), spawn $ "power-menu" )
   , ((modMask, xK_v), spawn $ "flatpak run org.kde.kdenlive" )
   , ((modMask, xK_y), spawn $ "polybar-msg cmd toggle" )
   , ((modMask, xK_x), spawn $ "archlinux-logout" )
@@ -151,7 +149,7 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
   -- SUPER + SHIFT KEYS
 
   , ((modMask .|. shiftMask , xK_Return ), spawn $ "dolphin")
-  , ((modMask .|. shiftMask , xK_d ), spawn $ "dmenu_run -i -nb '#191919' -nf '#00ffff' -sb '#00ffff' -sf '#191919' -fn 'NotoMonoRegular:bold:pixelsize=14'")
+  , ((modMask .|. shiftMask , xK_d ), spawn $ "rofi -show drun -display-drun 'Bukak:' -theme danialtheme")
   , ((modMask .|. shiftMask , xK_r ), spawn $ "xmonad --recompile && xmonad --restart")
   , ((modMask .|. shiftMask , xK_q ), kill)
   -- , ((modMask .|. shiftMask , xK_x ), io (exitWith ExitSuccess))
@@ -354,7 +352,7 @@ main = do
 , manageHook = manageSpawn <+> myManageHook <+> manageHook myBaseConfig
 , modMask = myModMask
 , borderWidth = myBorderWidth
-, handleEventHook    = handleEventHook myBaseConfig <+> fullscreenEventHook
+-- , handleEventHook    = handleEventHook myBaseConfig <+> fullscreenEventHook
 , focusFollowsMouse = myFocusFollowsMouse
 , workspaces = myWorkspaces
 , focusedBorderColor = focdBord

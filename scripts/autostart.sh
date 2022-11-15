@@ -44,6 +44,7 @@ nitrogen --restore &
 # system Daemon
 emacs --daemon &
 sudo systemctl start httpd &
+sudo python /Applications/yt-local/server.py &
 
 #starting utility applications at boot time
 #run variety &

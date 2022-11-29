@@ -141,7 +141,7 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
   , ((modMask, xK_y), spawn $ "polybar-msg cmd toggle" )
   , ((modMask, xK_x), spawn $ "archlinux-logout" )
   , ((modMask, xK_s), spawn $ "spotify" )
-  , ((modMask, xK_m), spawn $ "emacsclient -c" )
+  , ((modMask, xK_m), spawn $ "emacs" )
   , ((modMask, xK_Escape), spawn $ "xkill" )
   , ((modMask, xK_Return), spawn $ "alacritty" )
   , ((modMask, xK_F12), spawn $ "rofi-theme-selector" )
@@ -151,7 +151,9 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
   , ((modMask .|. shiftMask , xK_Return ), spawn $ "dolphin")
   , ((modMask .|. shiftMask , xK_d ), spawn $ "rofi -show drun -display-drun 'Bukak:' -theme danialtheme")
   , ((modMask .|. shiftMask , xK_r ), spawn $ "xmonad --recompile && xmonad --restart")
+  , ((controlMask .|. shiftMask , xK_m ), spawn $ "emacsclient -c ")
   , ((modMask .|. shiftMask , xK_q ), kill)
+  , ((modMask .|. shiftMask , xK_s ), spawn $ "g4music")
   -- , ((modMask .|. shiftMask , xK_x ), io (exitWith ExitSuccess))
 
   -- CONTROL + ALT KEYS
@@ -164,7 +166,6 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
   , ((controlMask .|. mod1Mask , xK_o ), spawn $ "$HOME/.xmonad/scripts/picom-toggle.sh")
   , ((controlMask .|. mod1Mask , xK_p ), spawn $ "pamac-manager")
   , ((controlMask .|. mod1Mask , xK_r ), spawn $ "rofi-theme-selector")
-  , ((controlMask .|. mod1Mask , xK_s ), spawn $ "spotify")
   , ((controlMask .|. mod1Mask , xK_t ), spawn $ "alacritty")
   , ((controlMask .|. mod1Mask , xK_u ), spawn $ "pavucontrol")
   , ((controlMask .|. mod1Mask , xK_Return ), spawn $ "alacritty")

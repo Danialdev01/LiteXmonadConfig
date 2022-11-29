@@ -44,8 +44,6 @@ nitrogen --restore &
 # system Daemon
 emacs --daemon &
 sudo systemctl start httpd &
-sudo python /Applications/yt-local/server.py &
-
 #starting utility applications at boot time
 #run variety &
 run nm-applet &
@@ -63,7 +61,7 @@ sudo mount -a &
 
 #Apps run when boot
 #run notion-snap &
-#run emacsclient -c &
+run emacsclient -c &
 #run caffeine &
 #run vivaldi-stable &
 #run firefox &

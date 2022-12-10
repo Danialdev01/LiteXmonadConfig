@@ -132,7 +132,8 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
   -- SUPER + FUNCTION KEYS
 
   [ ((modMask, xK_e), spawn $ "code" )
-  , ((modMask, xK_q), kill )
+  , ((modMask .|. shiftMask , xK_q), kill)
+  -- , ((modMask, xK_q), kill )
   , ((modMask, xK_b), spawn $ "firefox" )
   , ((modMask .|. shiftMask , xK_b), spawn $ "brave" )
   , ((modMask, xK_d), spawn $ "danial-menu-manager" ) 

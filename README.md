@@ -9,6 +9,9 @@ mv DanialXmonadConfig .xmonad
 ```
 ## Keybindings :
 
+### System
+- Reload = Alt + R
+
 ### Apps binding:
 
 - VisualStudioCode = Super + E

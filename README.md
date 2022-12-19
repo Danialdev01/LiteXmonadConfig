@@ -20,7 +20,7 @@ mv DanialXmonadConfig .xmonad
 - Rofi = Super + D
 - Rofi theme selector = Super + F12
 - Alacritty = Super + Enter
-- Spotify = Super + S
+- Spotify = Super + Shift + S
 - Dolphin = Super + Shift + Enter
 - FireFox = Ctrl + Alt + F
 

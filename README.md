@@ -44,9 +44,6 @@ mv DanialXmonadConfig .xmonad
 - Shrink Window Size = Super + RightClick
 - Move Window = Super + LeftClick
 
-### Arco Tools :
-- Arco Tweaks = Ctrl + Alt + E
-
 ### Media Keys :
 - Increase Volume = Ctrl + Shift + UpArrow
 - Decrease Volume = Ctrl + Shift + DownArrow

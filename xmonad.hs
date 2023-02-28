@@ -61,9 +61,9 @@ myModMask = mod4Mask
 encodeCChar = map fromIntegral . B.unpack
 myFocusFollowsMouse = True
 myBorderWidth = 2
-myWorkspaces    = ["\61612","\61899","\61947","\61564","\61705","\61501","\61502","\61635","\62150","\61872"]
+--myWorkspaces    = ["\61612","\61899","\61947","\61564","\61705","\61501","\61502","\61635","\62150","\61872"]
 --myWorkspaces    = ["1","2","3","4","5","6","7","8","9","10"]
---myWorkspaces    = ["I","II","III","IV","V","VI","VII","VIII","IX","X"]
+myWorkspaces    = ["Main","Editor","Work","Files","Edits","Screen","Temp","Filler","Picture","Music"]
 
 myBaseConfig = desktopConfig
 
@@ -155,6 +155,7 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
   , ((controlMask .|. shiftMask , xK_m ), spawn $ "emacsclient -c ")
   , ((modMask .|. shiftMask , xK_q ), kill)
   , ((modMask .|. shiftMask , xK_s ), spawn $ "spotify")
+  , ((modMask .|. shiftMask , xK_s ), spawn $ "keepassxc")
   -- , ((modMask .|. shiftMask , xK_x ), io (exitWith ExitSuccess))
 
   -- CONTROL + ALT KEYS

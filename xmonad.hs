@@ -142,7 +142,7 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
   , ((modMask, xK_y), spawn $ "polybar-msg cmd toggle" )
   , ((modMask, xK_x), spawn $ "archlinux-logout" )
   , ((modMask, xK_s), spawn $ "g4music" )
-  , ((modMask, xK_m), spawn $ "emacs" )
+  , ((modMask, xK_m), spawn $ "emacsclient -c" )
   , ((modMask, xK_Escape), spawn $ "xkill" )
   , ((modMask, xK_Return), spawn $ "alacritty" )
   , ((modMask, xK_F12), spawn $ "rofi-theme-selector" )

@@ -44,6 +44,7 @@ nitrogen --restore &
 # system Daemon
 emacs --daemon &
 sudo systemctl start httpd &
+
 #starting utility applications at boot time
 #run variety &
 run nm-applet &

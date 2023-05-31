@@ -1,4 +1,4 @@
-# Danial config keybindings:
+# Config keybindings:
 
 ## Installation :
 
